@@ -28,7 +28,7 @@ def parse_args():
 
 
 def get_shared_folder() -> Path:
-    return os.mkdir('./runs')
+    return Path('./runs').mkdir(exist_ok=True)
 
 def get_init_file():
     # Init file must not exist, but it's parent dir must exist.
