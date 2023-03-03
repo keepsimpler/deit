@@ -28,7 +28,7 @@ def parse_args():
 
 
 def get_shared_folder() -> Path:
-    p = Path('./runs')
+    p = Path(os.path.abspath('./runs'))
     if not p.exists():
         p = p.mkdir()
     return p
